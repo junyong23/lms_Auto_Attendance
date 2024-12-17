@@ -26,13 +26,13 @@ time.sleep(2)
 
 # Id 입력하는 칸의 ID인 login_user_id 를 찾고, 사용자의 id(학번)을 입력해준다
 id_btn = driver.find_element(By.ID, 'login_user_id')
-id_btn.send_keys('20232071')
+id_btn.send_keys('Hak-Bun')
 
 # pw 입력하는 칸의 ID인 login_user_password 를 찾고, 사용자의 pw(비밀번호)을 입력해준다
 pw_btn = driver.find_element(By.ID, 'login_user_password')
 # 이때, 비밀번호 입력 칸은 활성화 되어 있지 않으므로 한번 클릭 후 입력하게 한다
 pw_btn.click()
-pw_btn.send_keys('cho182931!')
+pw_btn.send_keys('Password')
 
 #id와 비밀번호를 모두 입력하여 로그인 버튼을 찾고 눌러준다.
 login_btn = driver.find_element(By.CLASS_NAME, 'login_btn')
@@ -71,9 +71,9 @@ for i in schedule:
     f.write("\n----------------------------\n\n\n")
     j = j + 1
 
-#open 한 파일 닫는다
-f.close()
-
 #파일이 안정적으로 저장 될 15초 정도를 기다린 후 웹 닫는다
 time.sleep(15)
+
+#open 한 파일 닫는다
+f.close()
 driver.quit()
